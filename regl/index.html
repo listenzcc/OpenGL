@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGL Application</title>
+    <!-- Import REGL -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/regl/2.1.0/regl.min.js"></script> -->
+    <script src="/node_modules/regl/dist/regl.min.js"></script>
+    <!-- Import Stats.min.js -->
+    <script src="/node_modules/stats.js/build/stats.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            width: 800px;
+            height: 800px;
+            border: red solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="glCanvas"></canvas>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>

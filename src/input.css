@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/*
+优先级顺序
+    utilities > components > base
+
+最佳实践
+    基础样式：使用 @layer base 设置元素默认样式
+    组件样式：使用 @layer components 创建可复用组件
+    工具类：优先使用内置工具类，必要时用 @layer utilities 扩展
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    /* 自定义基础样式
+        作用：提供最基础的、重置的样式（类似于 normalize.css）
+        特点：
+            设置 HTML 元素的基本样式（如 h1-h6、p、a 等默认样式）
+            使用 @layer base 可以在这里添加自定义的基础样式
+            优先级最低，会被其他层覆盖
+    */
+    html {
+        font-family: 'sans-serif', system-ui, -apple-system, sans-serif;
+        /* 可选设置默认文本颜色 */
+        /* @apply text-gray-900; */
+        @apply text-cyan-900;
+    }
+
+    h1 {
+        @apply text-2xl font-bold;
+    }
+
+    canvas {
+        @apply border-white;
+        @apply border-2;
+
+        &:hover {
+            @apply border-blue-500;
+            @apply shadow-blue-900 shadow-md;
+        }
+    }
+
+    div {
+        @apply m-4;
+        @apply p-1;
+    }
+}
+
+@layer components {
+
+    /* 自定义组件
+        作用：定义可复用的组件类
+        特点：
+            适合为特定组件（如按钮、卡片等）添加样式
+            使用 @layer components 可以在这里添加自定义组件
+            优先级高于 base 但低于 utilities
+    */
+    .segment-div {
+        @apply border-1;
+        @apply border-amber-500;
+    }
+
+    .bg-canvas {
+        @apply w-[800px];
+        @apply h-[800px];
+        @apply bg-amber-100;
+    }
+
+    .sm-canvas {
+        @apply w-[200px];
+        @apply h-[200px];
+        @apply bg-amber-200;
+    }
+}
+
+@layer utilities {
+
+    /* 自定义工具类
+        作用：生成所有工具类（Tailwind 的核心功能）
+        特点：
+            包含所有实用工具类（如 p-4、text-center 等）
+            使用 @layer utilities 可以添加自定义工具类
+            优先级最高，会覆盖其他层的样式
+    */
+    @layer utilities {
+        .text-shadow {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+    }
+}

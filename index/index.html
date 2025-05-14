@@ -5,20 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/src/output.css" rel="stylesheet">
+
+    <script src="/node_modules/stats.js/build/stats.min.js"></script>
+    <script type="module" src="/node_modules/lil-gui/dist/lil-gui.esm.min.js"></script>
+    <!-- <script type="module">
+        import { GUI } from '/node_modules/lil-gui/dist/lil-gui.esm.min.js';
+        console.log(GUI)
+    </script> -->
+    <script src="./interactive.js" defer></script>
 </head>
 
 <body>
     <div class="segment-div">
         <h1>
-            Learning REGL
+            Template Page
         </h1>
     </div>
 
     <div class="segment-div">
+        <p>Div (class="segment-div")</p>
+    </div>
+
+    <div class="segment-div">
+        <p>Canvas (class="bg-canvas")</p>
         <canvas id="glCanvas" class="bg-canvas"></canvas>
     </div>
 
     <div class="segment-div">
+        <p>Canvas (class="sm-canvas")</p>
         <canvas id="glCanvas-1" class="sm-canvas"></canvas>
     </div>
 </body>

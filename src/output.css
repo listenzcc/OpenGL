@@ -178,7 +178,7 @@
 }
 @layer base {
   html {
-    font-family: 'sans-serif', system-ui, -apple-system, sans-serif;
+    font-family: "sans-serif", system-ui, -apple-system, sans-serif;
     color: var(--color-cyan-900);
   }
   h1 {

@@ -19,6 +19,7 @@ The tailwindcss setup.
 @tailwind utilities;
 
 @layer base {
+
   /* 自定义基础样式
         作用：提供最基础的、重置的样式（类似于 normalize.css）
         特点：
@@ -43,17 +44,23 @@ The tailwindcss setup.
 
     &:hover {
       @apply border-blue-500;
-      @apply shadow-blue-900 shadow-md;
+      @apply shadow-blue-900 shadow-sm;
     }
   }
 
   div {
     @apply m-4;
     @apply p-1;
+
+    &:hover {
+      @apply border-gray-500;
+      @apply shadow-gray-900 shadow-sm;
+    }
   }
 }
 
 @layer components {
+
   /* 自定义组件
         作用：定义可复用的组件类
         特点：
@@ -62,24 +69,27 @@ The tailwindcss setup.
             优先级高于 base 但低于 utilities
     */
   .segment-div {
-    @apply border-1;
+    @apply border-0;
+    @apply border-t-2;
+    @apply border-b-1;
     @apply border-amber-500;
   }
 
   .bg-canvas {
     @apply w-[800px];
-    @apply h-[800px];
+    @apply h-[600px];
     @apply bg-amber-100;
   }
 
   .sm-canvas {
     @apply w-[200px];
-    @apply h-[200px];
+    @apply h-[150px];
     @apply bg-amber-200;
   }
 }
 
 @layer utilities {
+
   /* 自定义工具类
         作用：生成所有工具类（Tailwind 的核心功能）
         特点：

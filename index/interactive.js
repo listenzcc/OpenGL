@@ -34,6 +34,8 @@ import('/node_modules/lil-gui/dist/lil-gui.esm.min.js').then(module => {
             array: [0.84, 0.93, 0.14]
         };
 
+    console.log(gui)
+
     function cb() {
         let innerHTML = '';
         for (let key in myObject) {

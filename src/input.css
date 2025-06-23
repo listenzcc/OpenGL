@@ -34,8 +34,17 @@ The tailwindcss setup.
     @apply text-cyan-900;
   }
 
+  body {
+    @apply w-5xl mx-auto;
+    @apply xl:w-5xl lg:w-lg md:w-md sm:w-sm
+  }
+
   h1 {
     @apply text-2xl font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
   }
 
   canvas {
@@ -79,12 +88,13 @@ The tailwindcss setup.
     @apply w-[800px];
     @apply h-[600px];
     @apply bg-amber-100;
+    @apply bg-[#eaeaea]
   }
 
   .sm-canvas {
     @apply w-[200px];
     @apply h-[150px];
-    @apply bg-amber-200;
+    @apply bg-[#eaeaea];
   }
 }
 

@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/src/output.css" rel="stylesheet">
 
+    <style>
+        .lil-gui {
+            --background-color: #f6f6f6a0;
+            --text-color: #3d3d3d;
+            --title-background-color: #efefef;
+            --title-text-color: #3d3d3d;
+            --widget-color: #eaeaea;
+            --hover-color: #f0f0f0;
+            --focus-color: #fafafa;
+            --number-color: #07aacf;
+            --string-color: #8da300;
+        }
+    </style>
+
     <script src="/node_modules/stats.js/build/stats.min.js"></script>
-    <script type="module" src="/node_modules/lil-gui/dist/lil-gui.esm.min.js"></script>
-    <!-- <script type="module">
-        import { GUI } from '/node_modules/lil-gui/dist/lil-gui.esm.min.js';
-        console.log(GUI)
-    </script> -->
     <script src="./interactive.js" defer></script>
 </head>
 
-<body class="w-[1000px] mx-auto">
+<body>
     <div class="segment-div">
         <h1>
             Template Page
@@ -28,13 +37,17 @@
     </div>
 
     <div class="segment-div">
-        <p>Canvas (class="bg-canvas")</p>
-        <canvas id="glCanvas" class="bg-canvas"></canvas>
+        <h2 class="text-center">Canvas (class="bg-canvas")</h2>
+        <div class="flex justify-center">
+            <canvas id="glCanvas" class="bg-canvas"></canvas>
+        </div>
     </div>
 
     <div class="segment-div">
-        <p>Canvas (class="sm-canvas")</p>
-        <canvas id="glCanvas-1" class="sm-canvas"></canvas>
+        <div>
+            <canvas id="glCanvas-1" class="sm-canvas"></canvas>
+            <p>Canvas (class="sm-canvas")</p>
+        </div>
     </div>
 </body>
 

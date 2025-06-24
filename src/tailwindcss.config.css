@@ -14,9 +14,14 @@ The tailwindcss setup.
     工具类：优先使用内置工具类，必要时用 @layer utilities 扩展
  */
 
+/* 
+They are automatically imported in v4
+<https://tailwindcss.com/docs/upgrade-guide>
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*/
 
 @layer base {
 
@@ -34,10 +39,10 @@ The tailwindcss setup.
     @apply text-cyan-900;
   }
 
-  body {
+  /* body {
     @apply w-5xl mx-auto;
     @apply xl:w-5xl lg:w-lg md:w-md sm:w-sm
-  }
+  } */
 
   h1 {
     @apply text-2xl font-bold;
@@ -85,9 +90,9 @@ The tailwindcss setup.
   }
 
   .bg-canvas {
-    @apply w-[800px];
+    /* @apply w-[800px]; */
+    @apply w-full;
     @apply h-[600px];
-    @apply bg-amber-100;
     @apply bg-[#eaeaea]
   }
 

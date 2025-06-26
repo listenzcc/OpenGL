@@ -35,8 +35,8 @@ They are automatically imported in v4
   html {
     font-family: "sans-serif", system-ui, -apple-system, sans-serif;
     /* 可选设置默认文本颜色 */
-    /* @apply text-gray-900; */
-    @apply text-cyan-900;
+    @apply text-gray-900;
+    /* @apply text-cyan-900; */
   }
 
   /* body {
@@ -52,8 +52,8 @@ They are automatically imported in v4
     @apply text-xl font-bold;
   }
 
-  canvas {
-    @apply border-white;
+  canvas.useHover {
+    @apply border-gray-500;
     @apply border-2;
 
     &:hover {
@@ -63,7 +63,7 @@ They are automatically imported in v4
   }
 
   div {
-    @apply m-4;
+    @apply m-1;
     @apply p-1;
 
     &:hover {
@@ -81,12 +81,27 @@ They are automatically imported in v4
             适合为特定组件（如按钮、卡片等）添加样式
             使用 @layer components 可以在这里添加自定义组件
             优先级高于 base 但低于 utilities
-    */
+  */
+
+  div.capsule {
+    @apply text-amber-100;
+    @apply bg-slate-700;
+    @apply px-[1em];
+    @apply rounded-full;
+    @apply font-[math];
+    @apply italic;
+  }
+
   .segment-div {
     @apply border-0;
     @apply border-t-2;
     @apply border-b-1;
     @apply border-amber-500;
+  }
+
+  .colored-canvas {
+    /* @apply bg-emerald-300; */
+    @apply bg-[#e3e6e8]
   }
 
   .bg-canvas {
@@ -112,9 +127,7 @@ They are automatically imported in v4
             使用 @layer utilities 可以添加自定义工具类
             优先级最高，会覆盖其他层的样式
     */
-  @layer utilities {
-    .text-shadow {
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
+  .text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
 }

@@ -62,7 +62,7 @@ They are automatically imported in v4
     }
   }
 
-  div {
+  div.wellFormat {
     @apply m-1;
     @apply p-1;
 
@@ -84,8 +84,8 @@ They are automatically imported in v4
   */
 
   div.capsule {
-    @apply text-amber-100;
-    @apply bg-slate-700;
+    @apply text-[#ebe193];
+    @apply bg-[#32405e];
     @apply px-[1em];
     @apply rounded-full;
     @apply font-[math];

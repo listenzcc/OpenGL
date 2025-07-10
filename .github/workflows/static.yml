@@ -35,7 +35,7 @@ jobs:
       - name: MkDir
         run: |
           mkdir OpenGL
-          mv * OpenGL
+          mv * OpenGL || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

@@ -19,7 +19,7 @@ const stats = new Stats();
     document.body.appendChild(stats.dom)
 }
 
-import('src/modules/lil-gui/dist/lil-gui.esm.min.js').then(module => {
+import('/src/modules/lil-gui/dist/lil-gui.esm.min.js').then(module => {
     const { GUI } = module,
         gui = new GUI({ title: 'Controls (lil-gui)' }),
         defaultFolder = gui.addFolder('Default setup'),

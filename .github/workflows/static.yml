@@ -37,7 +37,7 @@ jobs:
         run: |
           find ./ -type f -name "*.html" -exec sed -i 's|src="/|src="OpenGL/|g' {} \;
           find ./ -type f -name "*.html" -exec sed -i 's|href="/|href="OpenGL/|g' {} \;
-          find ./ -type f -name "*.js" -exec sed -i 's|import('/|import('/OpenGL/|g' {} \;
+          find ./ -type f -name "*.js" -exec sed -i 's|import("/|import("/OpenGL/|g' {} \;
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

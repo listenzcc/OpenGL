@@ -19,7 +19,7 @@ const stats = new Stats();
     document.body.appendChild(stats.dom)
 }
 
-import('/node_modules/lil-gui/dist/lil-gui.esm.min.js').then(module => {
+import('/src/modules/lil-gui/dist/lil-gui.esm.min.js').then(module => {
     const { GUI } = module,
         gui = new GUI({ title: 'Controls (lil-gui)' }),
         defaultFolder = gui.addFolder('Default setup'),
@@ -47,7 +47,7 @@ import('/node_modules/lil-gui/dist/lil-gui.esm.min.js').then(module => {
             context.fillStyle = ControlOptions.color1
             context.fillRect(0, 0, canvas.width, canvas.height)
             context.fillStyle = 'white'
-            context.font = parseInt(canvas.width / 80) + 'px serif'
+            context.font = Math.max(14, parseInt(canvas.width / 80)) + 'px serif'
             context.fillText(Date().toLocaleString(), 100, 100)
             requestAnimationFrame(cb)
         }
